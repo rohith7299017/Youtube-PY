@@ -1,0 +1,28 @@
+from pytube import YouTube
+
+def download_youtube_video(video_url):
+    output_path = r"D:\uload"  # Your specified path
+
+    try:
+        # Create a YouTube object
+        yt = YouTube(video_url)
+
+        # Get the highest resolution video stream available
+        video = yt.streams.get_highest_resolution()
+
+        # Get the filename (default name) of the video
+        filename = video.default_filename
+
+        # Specify the output path with the folder name
+        output_with_folder = f"{output_path}\\{filename}"  # Using double backslashes for Windows path
+
+        # Download the video to the specified output path with a custom filename
+        video.download(output_with_folder)
+        print(f"Download completed! Video saved as '{filename}' in '{output_with_folder}'.")
+
+    except Exception as e:
+        print("An error occurred:", str(e))
+
+# Example usage:
+video_url = "https://www.youtube.com/watch?v=XElSMx4gs0Q"
+download_youtube_video(video_url)
