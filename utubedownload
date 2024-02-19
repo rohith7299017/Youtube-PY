@@ -1,7 +1,7 @@
 from pytube import YouTube
 
 def download_youtube_video(video_url):
-    output_path = r"D:\uload"  # Your specified path
+    output_path = r""  # Your specified path
 
     try:
         # Create a YouTube object
