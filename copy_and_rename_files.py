@@ -2,8 +2,8 @@ import shutil
 import os
 
 # Specify the paths for the source parent folder and the destination folder
-parent_folder = r'D:\YOUTUBE\uload'
-destination_folder = r'D:\YOUTUBE\modified'
+parent_folder = r''
+destination_folder = r''
 new_extension = '.mp3'
 
 def copy_files_to_folder(parent_folder,destination_folder):
